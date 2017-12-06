@@ -9,7 +9,7 @@ properties([
   pipelineTriggers([
     upstream(
       threshold: 'SUCCESS',
-      upstreamProjects: 'jenkins_new/nikhil'
+      upstreamProjects: 'jenkins2/master'
     )
   ])
 ])
