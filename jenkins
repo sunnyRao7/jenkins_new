@@ -5,6 +5,14 @@ properties([
     projectUrlStr: 'https://github.com/sunnyRao7/jenkins_new.git/'],
     pipelineTriggers([githubPush()])])
 
+properties([
+  pipelineTriggers([
+    upstream(
+      threshold: 'SUCCESS',
+      upstreamProjects: 'jenkins_new/nikhil'
+    )
+  ])
+])
 pipeline {
     agent any 
 
