@@ -1,5 +1,4 @@
 
-properties([[$class: 'JobPropertyImpl', throttle: [count: 1, durationName: 'hour', userBoost: false]], pipelineTriggers([upstream('jenkins_new/master, ')])])
 pipeline {
     agent any 
 
